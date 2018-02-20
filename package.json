@@ -1,0 +1,23 @@
+{
+  "name": "srijan",
+  "version": "1.0.0",
+  "description": "",
+  "main": "gulpfile.js",
+  "devDependencies": {
+    "gulp": "^4.0.0",
+    "gulp-clean": "^0.4.0",
+    "gulp-hash": "^4.2.2",
+    "gulp-pug": "^3.3.0",
+    "gulp-sass": "^3.1.0",
+    "node-sass": "^4.7.2",
+    "pug": "^2.0.0-rc.4"
+  },
+  "scripts": {
+    "build": "NODE_ENV=production ./node_modules/.bin/gulp build",
+    "build:dev": "nodemon ./node_modules/.bin/gulp watch",
+    "build:clean": "./node_modules/.bin/gulp clean"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
