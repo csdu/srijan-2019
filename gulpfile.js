@@ -5,6 +5,8 @@ const hash = require('gulp-hash');
 const nodeSass = require('node-sass');
 const pug = require('gulp-pug');
 
+const team = require('./src/content/team');
+
 const isProduction = process.env.NODE_ENV === 'production';
 
 const srcDir = './src';
@@ -51,6 +53,7 @@ const options = {
   pug: {
     locals: {
       stylesheet: `${assetBasePath}/css/www/style.css`,
+      team,
     },
   },
 };

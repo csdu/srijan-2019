@@ -1,0 +1,66 @@
+.members
+  display: flex
+  flex-wrap: wrap
+  justify-content: center
+  align-items: center
+  padding-top: 6vh
+
+.member
+  max-width: 256px
+  display: flex
+  flex-direction: column
+  justify-content: center
+  align-items: center
+  margin: 5vh 0.3rem
+
+  &:hover
+    z-index: 999
+    cursor: pointer
+
+    .img img
+      transform: scale(1.2)
+      opacity: 1
+
+    .img::before
+      transform: translate(-50%, -50%) rotate(15deg) skew(15deg)
+      height: 130%
+      background-color: darken($color-tl, 5)
+
+  h3, span
+    text-align: center
+    font-weight: 400
+    width: 100%
+    z-index: -1
+
+  h3
+    font-size: 1.3em
+    line-height: 1.1
+    background: #000
+    color: $color-tl
+    padding: 8px
+
+  span
+    margin-top: 0.5rem
+    text-transform: uppercase
+    font-size: 0.9rem
+
+  .img
+    max-width: 256px
+    position: relative
+
+    img
+      opacity: 0.9
+      transition: all 0.2s ease-in-out
+
+    &:before
+      transition: all 0.3s ease-in-out
+      content: ""
+      display: block
+      position: absolute
+      top: 50%
+      left: 50%
+      width: 100%
+      height: 110%
+      z-index: -1
+      background: darken($color-tl, 2)
+      transform: translate(-50%, -50%) rotate(10deg) skew(10deg)

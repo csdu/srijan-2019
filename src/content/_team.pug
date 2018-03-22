@@ -1,0 +1,9 @@
+.flex.section.team
+  h2 The Team
+  .members
+    each member in team
+      .member
+        .img
+          img(src=member.image, alt="")
+        span #{member.title}
+        h3 #{member.name}

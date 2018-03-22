@@ -1,4 +1,12 @@
 html
   include _head
-  body
-    p hello
+  body.flex
+    include _header
+    h1 Srijan
+    p.subtitle
+      | Srijan is the annual magazine of Department of Computer Science,  University of Delhi.
+    .cta
+      a.button(href="") Read The Magazine
+      span.small Vol. 7 (2017)
+    include _about
+    include _team
