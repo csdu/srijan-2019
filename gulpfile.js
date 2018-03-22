@@ -4,6 +4,7 @@ const clean = require('gulp-clean');
 const hash = require('gulp-hash');
 const nodeSass = require('node-sass');
 const pug = require('gulp-pug');
+const cleanCSS = require('gulp-clean-css');
 
 const team = require('./src/content/team');
 
@@ -52,7 +53,13 @@ const options = {
   },
   pug: {
     locals: {
-      stylesheet: `${assetBasePath}/css/www/style.css`,
+      stylesheet: () => {
+        const assetManifest = require(paths.assetManifest);
+        const fileName = isProduction
+          ? assetManifest['style.css']
+          : 'style.css';
+        return `${assetBasePath}/css/www/${fileName}`
+      },
       team,
     },
   },
