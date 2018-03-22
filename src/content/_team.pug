@@ -4,6 +4,6 @@
     each member in team
       .member
         .img
-          img(src=member.image, alt="")
+          img(src=member.image.replace('/s1600/', '/s300-c/'), alt="")
         span #{member.title}
         h3 #{member.name}
