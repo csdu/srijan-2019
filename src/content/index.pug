@@ -8,6 +8,15 @@ html
     .cta
       a.button(href="") Read The Magazine
       span.small Vol. 7 (2017)
+      span.small
+        | (
+        a(href="#old" id="showOld") See previous editions
+        | )
     include _about
     include _team
+    include _previous-editions
     include _footer
+    script.
+      function toggleShow(){document.getElementById('old').classList.toggle('active')}
+      document.getElementById('showOld').addEventListener('click',toggleShow);
+      document.getElementById('close').addEventListener('click',toggleShow);
