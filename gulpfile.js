@@ -4,6 +4,7 @@ const clean = require('gulp-clean');
 const hash = require('gulp-hash');
 const nodeSass = require('node-sass');
 const pug = require('gulp-pug');
+const cleanCSS = require('gulp-clean-css');
 
 const team = require('./src/content/team');
 

@@ -3,7 +3,6 @@
 # directories
 d_srijan=dist/srijan
 d_css=dist/assets/css
-d_js=dist/assets/js
 
 # flags for aws s3
 f_permissions="--grants read=uri=http://acs.amazonaws.com/groups/global/AllUsers"
@@ -34,11 +33,11 @@ if [ $num -gt 0 ]; then
   echo "gzipping files..."
 
   # gzip all, except images
-  find $d_srijan $d_css $d_js -type f ! -name "*.gz" | xargs gzip -kf
+  find $d_srijan $d_css -type f ! -name "*.gz" | xargs gzip -kf
 
   # move all .gz files to upload dir
   #   while removing .gz suffix from file name
-  for f in $(find $d_srijan $d_css $d_js -type f -name "*.gz"); do
+  for f in $(find $d_srijan $d_css -type f -name "*.gz"); do
     d="$(dirname $f)"
     b=${f#dist/}
     mkdir -p dist/upload/"${d#dist/}"
@@ -55,8 +54,6 @@ if [ $num -gt 0 ]; then
     if [[ $f == assets/* ]]; then
       rf=${f#assets/}
       if [[ $rf == css/* ]]; then
-        aws s3 cp dist/upload/$f $b_cdn/$rf $f_cache $f_encoding $f_permissions
-      elif [[ $rf == js/* ]]; then
         aws s3 cp dist/upload/$f $b_cdn/$rf $f_cache $f_encoding $f_permissions
       fi
   elif [[ $f == srijan/* ]]; then
