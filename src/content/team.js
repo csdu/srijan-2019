@@ -19,7 +19,7 @@ module.exports = [
   },
   {
     name: 'Sudhanshu Vishnoi',
-    image: 'https://2.bp.blogspot.com/-xpY6eCauvj8/Wowymnpoc3I/AAAAAAAAALU/wEcXlZuWJ9M-58S0FsgOQ0rI0-ceB6pmACLcBGAs/s1600/sudhanshu-vishnoi.jpg',
+    image: 'https://2.bp.blogspot.com/-JuznALR_RDA/Wr5CnL6LB0I/AAAAAAAAAXQ/aVvkLVPxHBIlNcJqRLIAesmZIziIaCWWgCLcBGAs/s1600/sudhanshu-vishnoi.jpg',
     title: getTitle('ce'),
   },
   {
@@ -41,6 +41,11 @@ module.exports = [
     name: 'Jatin Rohilla',
     image: 'https://4.bp.blogspot.com/-6KqQSc9_fXw/WrP2Qo94DCI/AAAAAAAAAVU/bpRNej0R6lALqsh44ptifaPF5Ong0X80wCLcBGAs/s1600/jatin-rohilla.jpg',
     title: getTitle('je'),
+  },
+  {
+    name: 'Shreshth Saxena',
+    image: 'https://1.bp.blogspot.com/-mIOd8qhB3eQ/Wr5Gs9Kxt5I/AAAAAAAAAXw/JxxwILKGbHcENY1umkTu5OX2Gsp0S8HHQCLcBGAs/s1600/shreshth-saxena.jpg',
+    title: getTitle('jd'),
   },
   {
     name: 'Ashita Diwan',
