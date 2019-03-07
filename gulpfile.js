@@ -11,7 +11,7 @@ const team = require("./src/content/team");
 const isProduction = process.env.NODE_ENV === "production";
 
 const srcDir = "./src";
-const distDir = "./dist/srijan/2018";
+const distDir = "./dist";
 
 const paths = {
   sass: {
@@ -25,7 +25,7 @@ const paths = {
   assetManifest: `${srcDir}/assets.json`
 };
 
-const assetBasePath = isProduction ? "/srijan/2018/assets" : "/assets";
+const assetBasePath = isProduction ? "/assets" : "/assets";
 
 const options = {
   sass: {
