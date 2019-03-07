@@ -25,7 +25,7 @@ const paths = {
   assetManifest: `${srcDir}/assets.json`
 };
 
-const assetBasePath = isProduction ? "/assets" : "/assets";
+const assetBasePath = isProduction ? "/srijan/assets" : "/assets";
 
 const options = {
   sass: {
